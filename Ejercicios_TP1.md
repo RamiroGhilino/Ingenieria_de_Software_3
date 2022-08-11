@@ -45,3 +45,9 @@ Crear Pull Request:
 
 
 ## 5- Mergear código con conflictos
+
+Al final del archivo README se agregaron las siguientes lineas para completar el ejercicio:
+
+```
+Estas lineas fueron agregadas desde el clon original para desarrollar el ejercicio 5 del TP1
+```
