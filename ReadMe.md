@@ -8,4 +8,4 @@ Año: 2022
 
 [1 - TP1 - Git Básico](/Ejercicios_TP1.md)
 
-
+Estas lineas se agregaron desde el segundo clon para generar conflictos
