@@ -73,3 +73,6 @@ Base: Una version de los archivos que tanto local como remote tienen de ancestro
 
 ![](/Archivos/Archivos_TP1/Base%2CLocal%2CRemot.png)
 
+## 6- Algunos ejercicios online
+
+![](/Archivos/Archivos_TP1/Introducci%C3%B3n.png)
