@@ -51,3 +51,25 @@ Al final del archivo README se agregaron las siguientes lineas para completar el
 ```
 Estas lineas fueron agregadas desde el clon original para desarrollar el ejercicio 5 del TP1
 ```
+
+Mientras que en el README del segundo clon se agregó:
+
+```
+Estas lineas se agregaron desde el segundo clon para generar conflictos
+```
+
+
+Solucionando conflictos:
+
+![](/Archivos/Archivos_TP1/SolucionMerge.png)
+
+### Versiones Local, Base y Remote:
+
+Local: Son los cambios que nosotros hicimos.
+
+Remote: Los cambios que han sido subidos al repositorio, usualmente hecho por otros usuarios.
+
+Base: Una version de los archivos que tanto local como remote tienen de ancestro.
+
+![](/Archivos/Archivos_TP1/Base%2CLocal%2CRemot.png)
+
