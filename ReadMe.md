@@ -8,4 +8,5 @@ Año: 2022
 
 [1 - TP1 - Git Básico](/Ejercicios_TP1.md)
 
+[2 - TP2 - Introducción a Docker](/Ejercicios_TP2.md)
 

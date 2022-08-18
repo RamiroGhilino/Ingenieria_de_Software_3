@@ -1,4 +1,4 @@
-# Trabajo Practico 1
+# Trabajo Practico 1 - Git Básico
 
 ## 4 - Familiarizarse con el concepto de Pull Request
 
