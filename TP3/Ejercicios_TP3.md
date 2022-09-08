@@ -192,19 +192,28 @@ Docker Compose, a partir del archivo .yaml suministrado, realizó todas las tare
 
 ![](/Archivos/Archivos_TP3/architecture.png)
 
-Vote: aplicación que depende redis, que utiliza el puerto 5000 del equipo pero el container escucha en el puerto 80, se encuentra asociado a las redes de front y back
+* **Vote**: aplicación que depende redis, que utiliza el puerto 5000 del equipo pero el container escucha en el puerto 80, se encuentra asociado a las redes de front y back
 
-result: aplicación que se encarga de mostrar los resultados y por ello depende de la base de datos, utiliza los puertos 5001 del equipo para mostrar la información y el puerto 5858 para comunicarse con la base de datos, al igual que Vote se encuentra asociado a ambas redes.
+* **Result**: aplicación que se encarga de mostrar los resultados y por ello depende de la base de datos, utiliza los puertos 5001 del equipo para mostrar la información y el puerto 5858 para comunicarse con la base de datos, al igual que Vote se encuentra asociado a ambas redes.
 
-worker: aplicación que se encarga de extraer de redis los votos e introducirlos en la base de datos, por lo tanto depende de ambos para funcionar, se encuentra asociado a la red de back.
+* **Worker**: aplicación que se encarga de extraer de redis los votos e introducirlos en la base de datos, por lo tanto depende de ambos para funcionar, se encuentra asociado a la red de back.
 
-redis: motor de base de datos que permite almacenar datos en memoria con la opción de que sean persistentes, se utiliza en este caso para hacer una cola de votos para que el worker pueda llevarlos a la base de datos. Asociado a la red de back
+* **Redis**: motor de base de datos que permite almacenar datos en memoria con la opción de que sean persistentes, se utiliza en este caso para hacer una cola de votos para que el worker pueda llevarlos a la base de datos. Asociado a la red de back
 
-db: una base de datos de postgresql para almacenar los votos de la aplicación. asociado a la red de network.
+* **DB**: una base de datos de postgresql para almacenar los votos de la aplicación. asociado a la red de network.
 
 
 En este archivo .yml también se crean las dos redes mencionadas y un volumen para persistir los datos de la base de datos.
 
-### COnfiguraciones y Tablas
+### Configuraciones y Tablas
+
+Modificando los puertos, ingresamos a la base de datos y a redis.
 
 ![](/Archivos/Archivos_TP3/Postgres.png)
+
+### Diagrama de Caso de Uso
+
+![](/Archivos/Archivos_TP3/Caso_De_Uso.png)
+### Diagrama de Secuencia
+
+![](/Archivos/Archivos_TP3/DiagramaSecuencia.png)
