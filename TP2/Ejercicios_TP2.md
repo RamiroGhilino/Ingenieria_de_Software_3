@@ -2,7 +2,7 @@
 
 ## 1- Instalar Docker Community Edition
 
-![](/Archivos/Archivos_TP2/docker_version.png)
+![](/TP2/Archivos_TP2/docker_version.png)
 
 ## 3- Obtener la imagen BusyBox
 
@@ -150,13 +150,13 @@ Ejercicios_TP1.md  ReadMe.md
 
 ```
 
-![](/Archivos/Archivos_TP2/hola_txt.png)
+![](/TP2/Archivos_TP2/hola_txt.png)
 
 ## 8- Publicando puertos
 
 Ejecutamos la siguiente imagen, usando la flag -d para tener control de la consola.
 
-![](/Archivos/Archivos_TP2/nyan-cat-web.png)
+![](/TP2/Archivos_TP2/nyan-cat-web.png)
 
 ```
 ramiro@ramiro:~/Ingeniería de Software 3$ docker run -d -p 8080:80 daviey/nyan-cat-web
@@ -165,13 +165,13 @@ ff7558e901b8ac872bf9c6f219d36935ce84a582a0bd3f3f8ab024f155f741e1
 
 Ahora podemos ver que la imagen de docker tiene asigando el puerto 8080 en la computadora, por los cual al ir a localhost:8080:
 
-![](/Archivos/Archivos_TP2/Docker8080.png)
+![](/TP2/Archivos_TP2/Docker8080.png)
 
 ## 9- Utilizando una base de datos
 
-![](/Archivos/Archivos_TP2/postgres.png)
+![](/TP2/Archivos_TP2/postgres.png)
 
-![](/Archivos/Archivos_TP2/DBeaver.png)
+![](/TP2/Archivos_TP2/DBeaver.png)
 
 
 

@@ -6,21 +6,21 @@
 
 Una ves levantados los cotenedores:
 
-![](/Archivos/Archivos_TP4/landpage.png)
+![](/TP4/Archivos_TP4/landpage.png)
 
-![](/Archivos/Archivos_TP4/Logging.png)
+![](/TP4/Archivos_TP4/Logging.png)
 
-![](/Archivos/Archivos_TP4/Loggeado.png)
+![](/TP4/Archivos_TP4/Loggeado.png)
 
-![](/Archivos/Archivos_TP4/busqueda.png)
+![](/TP4/Archivos_TP4/busqueda.png)
 
-![](/Archivos/Archivos_TP4/prdocuto.png)
+![](/TP4/Archivos_TP4/prdocuto.png)
 
-![](/Archivos/Archivos_TP4/carrito.png)
+![](/TP4/Archivos_TP4/carrito.png)
 
-![](/Archivos/Archivos_TP4/carrito%20con%20datos.png)
+![](/TP4/Archivos_TP4/carrito%20con%20datos.png)
 
-![](/Archivos/Archivos_TP4/orden.png)
+![](/TP4/Archivos_TP4/orden.png)
 
 ### 2 - Investigación de los componentes
 1. 
@@ -64,10 +64,39 @@ Por otro lado, los componentes son:
 Como punto positivo es mas sencillo desarrollar un servicio que solo tiene que hacer una unica cosa (o pocas) que pensar en una aplicación completa con todas las funcionalidades, por esto mismo también resulta mas fácil testearlo, mantenerlo y solucionar fallos que probablemente sean aislados.
 Por otro lado, lo "negativo" sería que ahora hay que pensar en la comunicación interna de los microservicios, como uno hace uso del otro y cuales son las dependencias entre si. Desplegar un sistema de microservicios debe ser mas complicado que un monolítico.
 
-![](/Archivos/Archivos_TP4/Monolith%20Vs%20Microservice%20image.png)
+![](/TP4/Archivos_TP4/Monolith%20Vs%20Microservice%20image.png)
 
 4. El contenedor que simula ser el API Gateway es el que se denomina `edge-router`: 
 
 Además, si revisamos la explicación de de Traefik que es sobre lo que se basa el `edge-router` : 
 *"Traefik es un Edge Router, significa que es la puerta a su plataforma, y ​​que intercepta y enruta cada solicitud entrante: conoce toda la lógica y cada regla que determina qué servicios manejan qué solicitudes (según la ruta, el host , encabezados, etc.)."*
 
+5. Al ejecutar `curl http://localhost/customers` obtenemos la siguiente respuesta:
+
+![](/TP4/Archivos_TP4/JSONCURL.png)
+
+Como podemos observar, obtenemos como respuesta un JSON con los clientes o usuarios que se encuentran en la base de datos.
+
+6. El servicio que ese encarga de obtener la solicitud es `front-end_1 `
+
+Si revisamos los logs del contenedor con el comando `docker logs -f [Nombre Contenedor]` podemos ver la actividad que ocurre cada vez que hacemos una solicitud:
+
+![](/TP4/Archivos_TP4/Front-1_curl.png)
+
+Sin embargo, el servicio que realmente se encarga procesar la solicitud y recabar la información es `user_1`
+
+![](/TP4/Archivos_TP4/Logs-User1.png)
+
+7. En este caso, similar al anterior, `front-end_1 ` obtiene la solicitud y le encarga el trabajo de procesarla a `catalogue-1`, en la siguiente foto podemos ver que frente a las dos consultas el contenedor de catalogue introduce un nuevo log.
+
+![](/TP4/Archivos_TP4/CurlCatalogo.png)
+
+8. Los datos de los servicios persisten en 4 bases de datos, una para cada servicio, los cuales son: Usuarios, Catálogo, Carritos y Órdenes.
+
+Sin embargo, estas bases de datos no tienen asignado un volumen, por lo que los datos persisten siempre y cuando no se den de baja los servicios (Contenedores).
+
+![](/TP4/Archivos_TP4/diagramamicroservicios.png)
+
+9. El componente encargado del procesamiento de la cola de mensajes es `queue-master_1`.
+
+10. En este caso particular los microservicios se comunican haciendo uso de API REST, aunque existen varias maneras para lograr la comunicación, siendo la otra mas común gRPC.

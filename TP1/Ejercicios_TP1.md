@@ -7,7 +7,7 @@
 Un pull request es una solicitud al dueño del repositorio para aceptar los cambios realizados por otros usuarios. Este comando nos permite contribuir a los proyectos de otras personas.
 
 Crear un branch local y agregar un archivo nuevo (Cambio):
-![](/Archivos/Archivos_TP1/New_Branch.png)
+![](/TP1/Archivos_TP1/New_Branch.png)
 
 Agregando cambios a la branch, creando commit y subiendo al repo remoto:
 ```
@@ -36,11 +36,11 @@ To https://github.com/RamiroGhilino/Trabajo-Pr-ctico-N-1---Ing-de-Sof-3.git
 
 Crear Pull Request: 
 
-![](/Archivos/Archivos_TP1/Pull_Request.png)
+![](/TP1/Archivos_TP1/Pull_Request.png)
 
-![](/Archivos/Archivos_TP1/CrearPullRequest.png)
+![](/TP1/Archivos_TP1/CrearPullRequest.png)
 
-![](/Archivos/Archivos_TP1/AceptarPullRequest.png)
+![](/TP1/Archivos_TP1/AceptarPullRequest.png)
 
 
 
@@ -61,7 +61,7 @@ Estas lineas se agregaron desde el segundo clon para generar conflictos
 
 Solucionando conflictos:
 
-![](/Archivos/Archivos_TP1/SolucionMerge.png)
+![](/TP1/Archivos_TP1/SolucionMerge.png)
 
 ### Versiones Local, Base y Remote:
 
@@ -71,8 +71,8 @@ Remote: Los cambios que han sido subidos al repositorio, usualmente hecho por ot
 
 Base: Una version de los archivos que tanto local como remote tienen de ancestro.
 
-![](/Archivos/Archivos_TP1/Base%2CLocal%2CRemot.png)
+![](/TP1/Archivos_TP1/Base%2CLocal%2CRemot.png)
 
 ## 6- Algunos ejercicios online
 
-![](/Archivos/Archivos_TP1/Introducci%C3%B3n.png)
+![](/TP1/Archivos_TP1/Introducci%C3%B3n.png)

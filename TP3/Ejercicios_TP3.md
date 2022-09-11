@@ -50,7 +50,7 @@ Status: Downloaded newer image for alexisfr/flask-app:latest
 
 ```
 
-![](/Archivos/Archivos_TP3/redis.png)
+![](/TP3/Archivos_TP3/redis.png)
 
 Verificar los contenedores con `docker ps -a`:
 
@@ -161,11 +161,11 @@ ramiro@XENIA-14:~/Ingenieria_de_Software_3$ docker run -d --net mybridge -e REDI
 
 4) Debido a que borramos la Base de Datos ahora la aplicación web no puede conectarse a esta.
 
-![](/Archivos/Archivos_TP3/falloconexiondb.png)
+![](/TP3/Archivos_TP3/falloconexiondb.png)
 
 5) Como levatamos nuevamente la Base de Datos el problema de conexión se resuelve pero los valores de la base de datos se perdieron, por lo que ahora el contador se reinició.
 
-![](/Archivos/Archivos_TP3/reiniciodb.png)
+![](/TP3/Archivos_TP3/reiniciodb.png)
 
 6) Para evitar perder los datos de la base de datos tendríamos que indicarle al container (al momento de crearlo) que queremos guardar información en un volumen externo al container, así cuando eliminamos este container y lo volvemos a crear le pedimos que lea la información directamente desde ese volumen, manteniendo así los datos.
 
@@ -180,17 +180,17 @@ Creating ingenieria_de_software_3_db_1 ... done
 Creating ingenieria_de_software_3_app_1 ... done
 ```
 
-![](/Archivos/Archivos_TP3/dockercompose.png)
+![](/TP3/Archivos_TP3/dockercompose.png)
 
 Docker Compose, a partir del archivo .yaml suministrado, realizó todas las tareas que habíamos logrado en pasos anteriores, incluyendo la creación de containers, la creación de la red y la configuración de las conexiones y volúmenes.
 
 ## 4- Aumentando la complejidad, análisis de otro sistema distribuido.
 
-![](/Archivos/Archivos_TP3/CatVsDogVots.png)
+![](/TP3/Archivos_TP3/CatVsDogVots.png)
 
 ### Cofiguración del sistema
 
-![](/Archivos/Archivos_TP3/architecture.png)
+![](/TP3/Archivos_TP3/architecture.png)
 
 * **Vote**: aplicación que depende redis, que utiliza el puerto 5000 del equipo pero el container escucha en el puerto 80, se encuentra asociado a las redes de front y back
 
@@ -209,11 +209,11 @@ En este archivo .yml también se crean las dos redes mencionadas y un volumen pa
 
 Modificando los puertos, ingresamos a la base de datos y a redis.
 
-![](/Archivos/Archivos_TP3/Postgres.png)
+![](/TP3/Archivos_TP3/Postgres.png)
 
 ### Diagrama de Caso de Uso
 
-![](/Archivos/Archivos_TP3/Caso_De_Uso.png)
+![](/TP3/Archivos_TP3/Caso_De_Uso.png)
 ### Diagrama de Secuencia
 
-![](/Archivos/Archivos_TP3/DiagramaSecuencia.png)
+![](/TP3/Archivos_TP3/DiagramaSecuencia.png)
