@@ -41,7 +41,7 @@ groupId, artifactId y versionId en conjunto identifican un artifact.
 
 4. Entender Ciclos de vida de build
 
-    - default: Maneja el deploymenr del proyecto
+    - default: Maneja el deployment del proyecto
 
     - clean: Maneja la limpieza del proyecto, elimina los archivos generados.
     
@@ -52,6 +52,7 @@ groupId, artifactId y versionId en conjunto identifican un artifact.
 ## 4 - Maven Continuación
 
 Luego de correr el comando `mvn archetype:generate -DgroupId=ar.edu.ucc -DartifactId=ejemplo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`se crearon los siguientes directorios:
+
 ![](./Archivos_TP5/DirectoriosMavenContinuacion.png)
 
 Podemos obsevar que el directorio principal es el Id del artifact y que se crearon directorios siguiendo los parámetros de DgroupId.
