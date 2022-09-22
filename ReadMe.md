@@ -17,3 +17,5 @@ Año: 2022
 [5 - TP5 - Herramientas de construcción de software](/TP5/Ejercicios_TP5.md)
 
 [6 - TP6 - Construcción de Imágenes de Docker](/TP6/Ejercicios_TP6.md) 
+
+[7 - TP7 - Servidor de Build (de integración continua)](/TP7/Ejercicios_TP7.md)
