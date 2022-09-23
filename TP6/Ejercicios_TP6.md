@@ -144,8 +144,8 @@ Toda esta información se puede encontrar en la [documentación](https://docs.do
 El dockerfile creado contiene:
 
 ```
-FROM node:13.12.0-alpine AS dependencias
-COPY hola-mundo/package.json /tmp/
+FROM node:13.12.0-alpine as DEPENDENCIAS
+COPY my-app/package.json /tmp/
 WORKDIR /tmp/
 RUN npm install
 
@@ -158,11 +158,11 @@ CMD npm run start
 
 A continuación podemos ver el comando usado y los output de consola, en la última linea podemos ver como efectivamente se nombró como `test-node`.
 
-![](./Archivo_TP6/buildtest-node.png)
+![](./Archivo_TP6/ReactDockerFile.png)
 
 Luego de utilizar el comando `docker run -p 3000:3000 test-node` podemos ver como efectivamente corre en el puerto asignado:
 
-![](./Archivo_TP6/ExpressDocker.png)
+![](./Archivo_TP6/ReactDocker.png)
 
 
 ## 6 - Publicar la imagen en Docker Hub.
@@ -172,9 +172,5 @@ La imagen se encuentra disponible [aquí](https://hub.docker.com/repository/dock
 Adjunto una captura de todas formas:
 
 
-![](./Archivo_TP6/DockerHubImage.png)
-
-
-
-
+![](./Archivo_TP6/DockerHubRepo.png)
     

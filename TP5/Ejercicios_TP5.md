@@ -109,11 +109,10 @@ En mi caso, ya tengo instalado nodejs:
 
 ![](./Archivos_TP5/nodejsversion.png)
 
-Después de instalar express, creo la aplicación y la corro:
+Después de instalar el proyecto de react con npx e iniciarlo:
 
-![](./Archivos_TP5/NodeJSHelloWorld.png)
+![](./Archivos_TP5/npxreact.png)
 
-![](./Archivos_TP5/ExpressLocalHost.png)
 
 **Análisis Sobre NPM**
 
