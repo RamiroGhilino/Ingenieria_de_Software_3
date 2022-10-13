@@ -6,10 +6,16 @@ import org.junit.Test;
 
 public class HelloWorldServiceTest {
 
-	@Test
-	public void expectedMessage() {
-		HelloWorldService helloWorldService = new HelloWorldService();
-		assertEquals("Expected correct message","Spring boot says hello from a Docker container",helloWorldService.getHelloMessage());
-	}
+	public static boolean first_time = true;
 	
+	@Test
+	public void gethelloMessageOnce() {
+		HelloWorldService helloWorldService = new HelloWorldService();
+		
+		assertEquals("Hola Hola",helloWorldService.getHelloMessage());
+		
+		assertEquals("Hello Hello",helloWorldService.getHelloMessage());
+	}
 }
+	
+
