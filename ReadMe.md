@@ -24,3 +24,6 @@ Año: 2022
 
 [9 - TP9 - Pruebas de unidad](/TP9/Ejercicios_TP9.md)
 
+[10 - TP10 - Pruebas de Integración](/TP10/Ejercicios_TP10.md)
+
+
