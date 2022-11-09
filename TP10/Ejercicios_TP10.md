@@ -72,7 +72,7 @@ spring-boot --
 
 Con este simple test podemos corroborar que efectivamente estamos corriendo spring boot en localhost y que reacciona como esperamos.
 
-### 4- Habilitar reportes para utilizarlos en CI/CD
+### 4 - Habilitar reportes para utilizarlos en CI/CD
 
 Instalado el módulo de reporting y modificado el archivo, corremos el comando `npx codeceptjs run --steps --reporter mocha-multi`:
 
@@ -95,3 +95,7 @@ spring-boot --
 Y el archivo de salida se ve de la siguiente manera:
 
 ![](./Archivos_Tp10/ResultsXML.png)
+
+### 5 - Integrar la ejecución en Jenkins
+
+TODO: Crear un container de spring-boot, crear un bridge network y permitir que se comuniquen el container de jenkins con el de spring-boot para que los test apunten a ese puerto
